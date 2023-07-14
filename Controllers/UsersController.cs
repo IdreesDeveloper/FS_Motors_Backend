@@ -7,7 +7,7 @@ namespace FS_Motors.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-  // private readonly ISuperHeroService _superHeroService;
+ //User COntroller
     public class UsersController : ControllerBase
     {
         private readonly IUserInterface _userInterfaceObj;
