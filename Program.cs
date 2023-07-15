@@ -1,6 +1,6 @@
 using FS_Motors.Interfaces;
 using FS_Motors.Repositories;
-using SuperHeroApiDotNet7.Data;
+using FS_Motors.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

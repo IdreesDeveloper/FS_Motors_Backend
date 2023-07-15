@@ -1,6 +1,6 @@
 ﻿using FS_Motors.Interfaces;
 using FS_Motors.Models;
-using SuperHeroApiDotNet7.Data;
+using FS_Motors.Data;
 
 namespace FS_Motors.Repositories
 {
@@ -13,30 +13,56 @@ namespace FS_Motors.Repositories
             _context = context;
         }
 
-        public Task<List<User>> AddUser(User User)
+        public async Task<List<User>> AddUser(User user)
         {
-            throw new NotImplementedException();
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            return await _context.Users.ToListAsync();
         }
 
-        public Task<List<User>?> DeleteUser(int id)
+        public async Task<List<User>?> DeleteUser(int id)
         {
-            throw new NotImplementedException();
+            var user = await _context.Users.FindAsync(id);
+            if (user is null)
+                return null;
+
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+
+            return await _context.Users.ToListAsync();
         }
 
         public async Task<List<User>> GetAllUsers()
         {
-            var usersList = await _context.Users.ToListAsync();
-            return usersList;
+            var users = await _context.Users.ToListAsync();
+            return users;
         }
 
-        public Task<User?> GetSingleUser(int id)
+        public async Task<User?> GetSingleUser(int id)
         {
-            throw new NotImplementedException();
+            var user = await _context.Users.FindAsync(id);
+            if (user is null)
+                return null;
+
+            return user;
         }
 
-        public Task<List<User>?> UpdateUser(int id, User request)
+        public async Task<List<User>?> UpdateUser(int id, User request)
         {
-            throw new NotImplementedException();
+            var user = await _context.Users.FindAsync(id);
+            if (user is null)
+                return null;
+
+            user.User_Id = request.User_Id;
+            user.First_Name = request.First_Name;
+            user.Last_Name = request.Last_Name;
+            user.Age = request.Age;
+            user.Email = request.Email;
+            user.Address = request.Address;
+
+            await _context.SaveChangesAsync();
+
+            return await _context.Users.ToListAsync();
         }
     }
 }

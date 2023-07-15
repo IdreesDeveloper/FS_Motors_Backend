@@ -1,7 +1,7 @@
 ﻿global using Microsoft.EntityFrameworkCore;
 using FS_Motors.Models;
 
-namespace SuperHeroApiDotNet7.Data
+namespace FS_Motors.Data
 {
     public class DataContext : DbContext
     {
@@ -16,6 +16,6 @@ namespace SuperHeroApiDotNet7.Data
             optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=Fs-Motors;Trusted_Connection=true;TrustServerCertificate=true;");
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; } 
     }
 }

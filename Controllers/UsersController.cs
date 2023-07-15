@@ -15,6 +15,7 @@ namespace FS_Motors.Controllers
         {
             _userInterfaceObj = userInterfaceObj;
         }
+        [HttpGet]
         public async Task<ActionResult<List<User>>> GetAllUseres()
         {
             return await _userInterfaceObj.GetAllUsers();
