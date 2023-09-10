@@ -17,5 +17,6 @@ namespace FS_Motors.Data
         }
 
         public DbSet<User> Users { get; set; } 
+        public DbSet<Car> Cars { get; set; } 
     }
 }
