@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS_Motors", "FS_Motors.csproj", "{FFADC3D2-749D-4D40-A287-B7070D1DE2F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFADC3D2-749D-4D40-A287-B7070D1DE2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFADC3D2-749D-4D40-A287-B7070D1DE2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFADC3D2-749D-4D40-A287-B7070D1DE2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFADC3D2-749D-4D40-A287-B7070D1DE2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF217AC8-E6C6-4570-9B6A-7DADA8F0A700}
+	EndGlobalSection
+EndGlobal

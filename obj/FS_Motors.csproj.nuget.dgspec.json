@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\FS\\FS_Motors\\FS_Motors\\FS_Motors.csproj": {}
+    "E:\\FS Motor\\FS_Motors_Backend\\FS_Motors.csproj": {}
   },
   "projects": {
-    "F:\\FS\\FS_Motors\\FS_Motors\\FS_Motors.csproj": {
+    "E:\\FS Motor\\FS_Motors_Backend\\FS_Motors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\FS\\FS_Motors\\FS_Motors\\FS_Motors.csproj",
+        "projectUniqueName": "E:\\FS Motor\\FS_Motors_Backend\\FS_Motors.csproj",
         "projectName": "FS_Motors",
-        "projectPath": "F:\\FS\\FS_Motors\\FS_Motors\\FS_Motors.csproj",
-        "packagesPath": "C:\\Users\\ijazm\\.nuget\\packages\\",
-        "outputPath": "F:\\FS\\FS_Motors\\FS_Motors\\obj\\",
+        "projectPath": "E:\\FS Motor\\FS_Motors_Backend\\FS_Motors.csproj",
+        "packagesPath": "C:\\Users\\MHK\\.nuget\\packages\\",
+        "outputPath": "E:\\FS Motor\\FS_Motors_Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ijazm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MHK\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,31 +42,35 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.9, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -88,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

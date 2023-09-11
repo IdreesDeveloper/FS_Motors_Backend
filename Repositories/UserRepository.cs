@@ -53,9 +53,9 @@ namespace FS_Motors.Repositories
             if (user is null)
                 return null;
 
-            user.User_Id = request.User_Id;
-            user.First_Name = request.First_Name;
-            user.Last_Name = request.Last_Name;
+            user.UserId = request.UserId;
+            user.FirstName = request.FirstName;
+            user.LastName = request.LastName;
             user.Age = request.Age;
             user.Email = request.Email;
             user.Address = request.Address;
