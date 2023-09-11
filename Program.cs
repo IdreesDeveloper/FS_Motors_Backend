@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserInterface, UserRepository>();
+builder.Services.AddScoped<ICarInterface, CarRepository>();
 builder.Services.AddDbContext<DataContext>();
 var app = builder.Build();
 

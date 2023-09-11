@@ -1,11 +1,10 @@
-﻿using FS_Motors.Data;
-using FS_Motors.Interfaces;
+﻿using FS_Motors.Interfaces;
 using FS_Motors.Models;
-using Microsoft.EntityFrameworkCore;
+using FS_Motors.Data;
 
 namespace FS_Motors.Repositories
 {
-    public class CarRepository : ICarRepository
+    public class CarRepository: ICarInterface
     {
         private readonly DataContext _context;
 
@@ -13,20 +12,21 @@ namespace FS_Motors.Repositories
         {
             _context = context;
         }
-        public async Task<List<Car>> AddCar(Car car)
+
+        public async Task<List<Car>> AddCar(Car Car)
         {
-            _context.Cars.Add(car);
+            _context.Cars.Add(Car);
             await _context.SaveChangesAsync();
             return await _context.Cars.ToListAsync();
         }
 
-        public async Task<List<Car>?> DeleteCars(int id)
+        public async Task<List<Car>?> DeleteCar(int id)
         {
-            var car = await _context.Cars.FindAsync(id);
-            if (car is null)
+            var Car = await _context.Cars.FindAsync(id);
+            if (Car is null)
                 return null;
 
-            _context.Cars.Remove(car);
+            _context.Cars.Remove(Car);
             await _context.SaveChangesAsync();
 
             return await _context.Cars.ToListAsync();
@@ -34,44 +34,35 @@ namespace FS_Motors.Repositories
 
         public async Task<List<Car>> GetAllCars()
         {
-            var cars = await _context.Cars.ToListAsync();
-            return cars;
+            var Cars = await _context.Cars.ToListAsync();
+            return Cars;
         }
 
-        public async Task<Car?> GetSinglCar(int id)
+        public async Task<Car?> GetSingleCar(int id)
         {
-            var car = await _context.Cars.FindAsync(id);
-            if (car is null)
+            var Car = await _context.Cars.FindAsync(id);
+            if (Car is null)
                 return null;
 
-            return car;
+            return Car;
         }
 
         public async Task<List<Car>?> UpdateCar(int id, Car request)
         {
-            var car = await _context.Cars.FindAsync(id);
-            if (car is null)
+            var Car = await _context.Cars.FindAsync(id);
+            if (Car is null)
                 return null;
 
-            car.CarId = request.CarId;
-            car.CarBuyingPrice = request.CarBuyingPrice;
-            car.CarBuyingDate = request.CarBuyingDate;
-            car.CarFinalPrice = request.CarFinalPrice;
-            car.CarMaintenanceCost = request.CarMaintenanceCost;
-            car.CarModelId = request.CarModelId;
-            car.CarShowroomCost = request.CarShowroomCost;
-            car.CarShowroomId = request.CarShowroomId;
-            car.CarSellingDate = request.CarSellingDate;
-            car.CarSellingPrice = request.CarSellingPrice;
-            car.CarStatus = request.CarStatus;
-            car.CarWorkshopId = request.CarWorkshopId;
-            car.CarTotalCost= request.CarTotalCost;
+            //Car.Car_Id = request.Car_Id;
+            //Car.First_Name = request.First_Name;
+            //Car.Last_Name = request.Last_Name;
+            //Car.Age = request.Age;
+            //Car.Email = request.Email;
+            //Car.Address = request.Address;
+
             await _context.SaveChangesAsync();
 
             return await _context.Cars.ToListAsync();
-
         }
-
-
     }
 }
